@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "walle", "walle\walle.csproj", "{7B5C4F8E-6DA5-41CB-8452-09958F007F73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "walle", "walle", "{9D210784-EDE9-48B6-B26F-2E3C999D5D8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{4760A5AF-3004-4C21-B560-B0784BAC9DAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{1D3F16D8-57CB-4ADC-8798-887043037AEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{B94A51F2-A3E7-48EC-80BC-19E58D0FC2BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js_builder", "js_builder", "{794DB220-432B-4675-B4A2-D0301A79112C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperJSBuilder", "app\js_builder\SuperJSBuilder\SuperJSBuilder.csproj", "{F40186C3-38F9-4C36-8D87-75C8369DB3FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B5C4F8E-6DA5-41CB-8452-09958F007F73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5C4F8E-6DA5-41CB-8452-09958F007F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5C4F8E-6DA5-41CB-8452-09958F007F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5C4F8E-6DA5-41CB-8452-09958F007F73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F40186C3-38F9-4C36-8D87-75C8369DB3FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F40186C3-38F9-4C36-8D87-75C8369DB3FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F40186C3-38F9-4C36-8D87-75C8369DB3FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F40186C3-38F9-4C36-8D87-75C8369DB3FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B5C4F8E-6DA5-41CB-8452-09958F007F73} = {9D210784-EDE9-48B6-B26F-2E3C999D5D8B}
+		{794DB220-432B-4675-B4A2-D0301A79112C} = {4760A5AF-3004-4C21-B560-B0784BAC9DAB}
+		{F40186C3-38F9-4C36-8D87-75C8369DB3FA} = {794DB220-432B-4675-B4A2-D0301A79112C}
+	EndGlobalSection
+EndGlobal
