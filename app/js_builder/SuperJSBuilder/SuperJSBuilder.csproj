@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="gen\dir_app\DirServiceApp.cs" />
+    <Compile Include="gen\dir_walle2\DirServiceWalle2.cs" />
     <Compile Include="merge\walle2\image\MergeServiceWalle2Image.cs" />
     <Compile Include="merge\walle2\js\MergeServiceWalle2JS.cs" />
     <Compile Include="merge\walle2\less\MergeServiceWalle2Less.cs" />
@@ -48,15 +50,20 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\ConfigService.cs" />
+    <Compile Include="utils\DirService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="gen\dir_app\" />
-    <Folder Include="gen\dir_walle2\" />
     <Folder Include="gen\mock_reg\" />
-    <Folder Include="gen\test_html\" />
+    <Folder Include="gen\test_html\app_css\" />
+    <Folder Include="gen\test_html\app_js\" />
+    <Folder Include="gen\test_html\app_mock\" />
+    <Folder Include="gen\test_html\lib_css\" />
+    <Folder Include="gen\test_html\lib_js\" />
+    <Folder Include="gen\test_html\walle2_css\" />
+    <Folder Include="gen\test_html\walle2_js\" />
     <Folder Include="merge\app\image\" />
     <Folder Include="merge\app\js\" />
     <Folder Include="merge\app\less\" />

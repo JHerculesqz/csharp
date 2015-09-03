@@ -14,7 +14,6 @@ namespace SuperJSBuilder.utils
 
         private static string FILE_PATH_CONF = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/SuperJSBuilder/params.xml");
         private static string PROP_PARAMS = "params";
-        private static string PROP_PARAM = "param";
         private static string PROP_PARAM_KEY = "key";
 
         public static string KEY_TYPE = "type";
