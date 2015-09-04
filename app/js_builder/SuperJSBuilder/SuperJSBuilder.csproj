@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="gen\dir_app\DirServiceApp.cs" />
     <Compile Include="gen\dir_walle2\DirServiceWalle2.cs" />
+    <Compile Include="gen\less_app\LessServiceApp.cs" />
+    <Compile Include="gen\less_walle2\LessServiceWalle2.cs" />
     <Compile Include="merge\walle2\image\MergeServiceWalle2Image.cs" />
     <Compile Include="merge\walle2\js\MergeServiceWalle2JS.cs" />
     <Compile Include="merge\walle2\less\MergeServiceWalle2Less.cs" />
@@ -51,11 +53,22 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\ConfigService.cs" />
     <Compile Include="utils\DirService.cs" />
+    <Compile Include="utils\FileServiceLess.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="data\SuperJSBuilder\less_app\template.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\SuperJSBuilder\less_walle2\template.less">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="data\SuperJSBuilder\js_app\" />
+    <Folder Include="data\SuperJSBuilder\js_walle2\" />
+    <Folder Include="gen\js_app\" />
+    <Folder Include="gen\js_walle2\" />
     <Folder Include="gen\mock_reg\" />
     <Folder Include="gen\test_html\app_css\" />
     <Folder Include="gen\test_html\app_js\" />

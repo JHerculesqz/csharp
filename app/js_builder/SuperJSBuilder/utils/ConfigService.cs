@@ -13,7 +13,8 @@ namespace SuperJSBuilder.utils
         #region Const
 
         private static string FILE_PATH_CONF = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/SuperJSBuilder/params.xml");
-        private static string PROP_PARAMS = "params";
+        private static string PROP_TASK = "task";
+        private static string PROP_PARAM = "param";
         private static string PROP_PARAM_KEY = "key";
 
         public static string KEY_TYPE = "type";
@@ -29,7 +30,8 @@ namespace SuperJSBuilder.utils
 
         #region Fields
 
-        private static Dictionary<string, string> m_mapConf = new Dictionary<string, string>();
+        private static ConfigServiceVo m_oConfigServiceVoWallE2 = new ConfigServiceVo();
+        private static ConfigServiceVo m_oConfigServiceVoApp = new ConfigServiceVo();
 
         #endregion
 
@@ -38,12 +40,23 @@ namespace SuperJSBuilder.utils
         public static void init()
         {
             var oDoc = XElement.Load(FILE_PATH_CONF);
-            var lstParamEle = oDoc.Elements(PROP_PARAMS);
-            foreach (var oParamEle in lstParamEle)
+            var lstTaskEle = oDoc.Elements(PROP_TASK);
+            foreach (var oTaskEle in lstTaskEle)
             {
-                var strKey = oParamEle.Attribute(PROP_PARAM_KEY).Value;
-                var strValue = oParamEle.Value;
-                m_mapConf.Add(strKey, strValue);
+                var lstParamEle = oTaskEle.Elements(PROP_PARAM);
+                foreach (var oParamEle in lstParamEle)
+                {
+                    var strKey = oParamEle.Attribute(PROP_PARAM_KEY).Value;
+                    var strValue = oParamEle.Value;
+                    if (lstTaskEle.First().Equals(oTaskEle))
+                    {
+                        m_oConfigServiceVoWallE2.Configs.Add(strKey, strValue);
+                    }
+                    else
+                    {
+                        m_oConfigServiceVoApp.Configs.Add(strKey, strValue);
+                    }
+                }
             }
         }
 
@@ -51,9 +64,29 @@ namespace SuperJSBuilder.utils
 
         #region getValue
 
-        public static string getValue(string strKey)
+        public static string getValue4WallE(string strKey)
         {
-            return m_mapConf[strKey];
+            return m_oConfigServiceVoWallE2.Configs[strKey];
+        }
+
+        public static string getValue4App(string strKey)
+        {
+            return m_oConfigServiceVoApp.Configs[strKey];
+        }
+
+        #endregion
+    }
+
+    public class ConfigServiceVo
+    {
+        #region Fields
+
+        private Dictionary<string, string> configs = new Dictionary<string, string>();
+
+        public Dictionary<string, string> Configs
+        {
+            get { return configs; }
+            set { configs = value; }
         }
 
         #endregion

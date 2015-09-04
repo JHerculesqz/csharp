@@ -1,13 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<params>
+<tasks>
   <!--minify walle2-->
-  <params key="type">walle2</params>
-  <params key="srcDirPath">C:\1.Monkey\1.Research\4.SCM_GIT\JS\walle2</params>
-  <params key="mergeName">walle2.web</params>
+  <task>
+    <param key="type">walle2</param>
+    <param key="srcDirPath">C:\1.Monkey\1.Research\4.SCM_GIT\JS\walle2</param>
+    <param key="mergeName">walle2.web</param>  
+  </task>
   <!--minify app-->
-  <!--<params key="type">app</params>
-  <params key="srcDirPath">C:\1.Monkey\1.Research\4.SCM_GIT\JS\app\ipcrystal2</params>
-  <params key="mergeName">ipcrystal2.web</params>
-  <params key="replaceDirPath">C:\1.Monkey\1.Research\4.SCM_GIT\JS\</params>
-  <params key="mockRegLevel">IMPL</params>-->
-</params>
+  <task>
+    <param key="type">app</param>
+    <param key="srcDirPath">C:\1.Monkey\1.Research\4.SCM_GIT\JS\app\ipcrystal</param>
+    <param key="mergeName">ipcrystal.web</param>
+    <param key="replaceDirPath">C:\1.Monkey\1.Research\4.SCM_GIT\JS\</param>
+    <param key="mockRegLevel">IMPL</param>
+  </task>
+</tasks>
