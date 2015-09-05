@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SuperJSBuilder.utils
 {
-    interface IFileAdapterJS
+    interface IGenFileAdapterLess
     {
         string getPrefixName();
 

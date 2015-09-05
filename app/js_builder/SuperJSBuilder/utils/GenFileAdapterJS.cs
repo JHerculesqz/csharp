@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SuperJSBuilder.utils
 {
-    class FileAdapterJS
+    class GenFileAdapterJS
     {
         #region Const
 
@@ -20,7 +20,7 @@ namespace SuperJSBuilder.utils
 
         #endregion
 
-        public static void _genByType(string strSrcDirPath, string strSubDirPath, IFileAdapterJS oIFileAdapterJS)
+        public static void _genByType(string strSrcDirPath, string strSubDirPath, IGenFileAdapterJS oIFileAdapterJS)
         {
             var arrLines = File.ReadAllLines(FILE_PATH_PRJ_IN_X(strSrcDirPath, strSubDirPath));
             foreach (var strModuleName in arrLines)

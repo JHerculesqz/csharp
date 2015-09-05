@@ -13,17 +13,17 @@ namespace SuperJSBuilder.gen.js_app
         public static void gen(string strSrcDirPath)
         {
             Console.WriteLine("==============JSServiceAPP start====================");
-            FileAdapterJS._genByType(strSrcDirPath, "", new FileAdapterJSAppJS());
-            FileAdapterJS._genByType(strSrcDirPath, "", new FileAdapterJSAppMainJS());
-            FileAdapterJS._genByType(strSrcDirPath, "", new FileAdapterJSAppMockJS());
-            FileAdapterJS._genByType(strSrcDirPath, "", new FileAdapterJSAppRegJS());
+            GenFileAdapterJS._genByType(strSrcDirPath, "", new FileAdapterJSAppJS());
+            GenFileAdapterJS._genByType(strSrcDirPath, "", new FileAdapterJSAppMainJS());
+            GenFileAdapterJS._genByType(strSrcDirPath, "", new FileAdapterJSAppMockJS());
+            GenFileAdapterJS._genByType(strSrcDirPath, "", new FileAdapterJSAppRegJS());
             Console.WriteLine("==============JSServiceAPP end====================");
         }
     }
 
     #region FileAdapterJSAppJS
 
-    class FileAdapterJSAppJS : IFileAdapterJS
+    class FileAdapterJSAppJS : IGenFileAdapterJS
     {
         #region Const
 
@@ -63,7 +63,7 @@ namespace SuperJSBuilder.gen.js_app
 
     #region FileAdapterJSAppMainJS
 
-    class FileAdapterJSAppMainJS : IFileAdapterJS
+    class FileAdapterJSAppMainJS : IGenFileAdapterJS
     {
         #region Const
 
@@ -103,7 +103,7 @@ namespace SuperJSBuilder.gen.js_app
 
     #region FileAdapterJSAppMockJS
 
-    class FileAdapterJSAppMockJS : IFileAdapterJS
+    class FileAdapterJSAppMockJS : IGenFileAdapterJS
     {
         #region Const
 
@@ -143,7 +143,7 @@ namespace SuperJSBuilder.gen.js_app
 
     #region FileAdapterJSAppRegJS
 
-    class FileAdapterJSAppRegJS : IFileAdapterJS
+    class FileAdapterJSAppRegJS : IGenFileAdapterJS
     {
         #region Const
 

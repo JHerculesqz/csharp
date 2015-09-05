@@ -13,14 +13,14 @@ namespace SuperJSBuilder.gen.less_app
         public static void gen(string strSrcDirPath)
         {
             Console.WriteLine("==============LessServiceWalle2 start====================");
-            FileAdapterLess._genByType(strSrcDirPath, "", new FileAdapterLessApp());
+            GenFileAdapterLess._genByType(strSrcDirPath, "", new FileAdapterLessApp());
             Console.WriteLine("==============LessServiceWalle2 end====================");
         }
     }
 
     #region FileAdapterLessApp
 
-    class FileAdapterLessApp : IFileAdapterLess
+    class FileAdapterLessApp : IGenFileAdapterLess
     {
         #region Const
 

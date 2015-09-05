@@ -13,16 +13,16 @@ namespace SuperJSBuilder.gen.less_walle2
         public static void gen(string strSrcDirPath)
         {
             Console.WriteLine("==============LessServiceWalle2 start====================");
-            FileAdapterLess._genByType(strSrcDirPath, "core", new FileAdapterLessWalle2());
-            FileAdapterLess._genByType(strSrcDirPath, "component", new FileAdapterLessWalle2());
-            FileAdapterLess._genByType(strSrcDirPath, "widget", new FileAdapterLessWalle2());
+            GenFileAdapterLess._genByType(strSrcDirPath, "core", new FileAdapterLessWalle2());
+            GenFileAdapterLess._genByType(strSrcDirPath, "component", new FileAdapterLessWalle2());
+            GenFileAdapterLess._genByType(strSrcDirPath, "widget", new FileAdapterLessWalle2());
             Console.WriteLine("==============LessServiceWalle2 end====================");
         }
     }
 
     #region FileAdapterLessWalle2
 
-    class FileAdapterLessWalle2 : IFileAdapterLess
+    class FileAdapterLessWalle2 : IGenFileAdapterLess
     {
         #region Const
 

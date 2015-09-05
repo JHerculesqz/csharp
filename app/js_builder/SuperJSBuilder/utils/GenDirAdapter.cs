@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SuperJSBuilder.utils
 {
-    class DirAdapter
+    class GenDirAdapter
     {
         #region Const
 

@@ -13,9 +13,9 @@ namespace SuperJSBuilder.gen.dir_walle2
         public static void gen(string strSrcDirPath)
         {
             Console.WriteLine("==============DirServiceWalle2 start====================");
-            DirAdapter._genByType(strSrcDirPath, "core");
-            DirAdapter._genByType(strSrcDirPath, "component");
-            DirAdapter._genByType(strSrcDirPath, "widget");
+            GenDirAdapter._genByType(strSrcDirPath, "core");
+            GenDirAdapter._genByType(strSrcDirPath, "component");
+            GenDirAdapter._genByType(strSrcDirPath, "widget");
             Console.WriteLine("==============DirServiceWalle2 end====================");
         }
     }

@@ -13,16 +13,16 @@ namespace SuperJSBuilder.gen.js_walle2
         public static void gen(string strSrcDirPath)
         {
             Console.WriteLine("==============JSServiceWalle2 start====================");
-            FileAdapterJS._genByType(strSrcDirPath, "core", new FileAdapterJSWalle2());
-            FileAdapterJS._genByType(strSrcDirPath, "component", new FileAdapterJSWalle2());
-            FileAdapterJS._genByType(strSrcDirPath, "widget", new FileAdapterJSWalle2());
+            GenFileAdapterJS._genByType(strSrcDirPath, "core", new FileAdapterJSWalle2());
+            GenFileAdapterJS._genByType(strSrcDirPath, "component", new FileAdapterJSWalle2());
+            GenFileAdapterJS._genByType(strSrcDirPath, "widget", new FileAdapterJSWalle2());
             Console.WriteLine("==============JSServiceWalle2 end====================");
         }
     }
 
     #region FileAdapterJSWalle2
 
-    class FileAdapterJSWalle2 : IFileAdapterJS
+    class FileAdapterJSWalle2 : IGenFileAdapterJS
     {
         #region Const
 
