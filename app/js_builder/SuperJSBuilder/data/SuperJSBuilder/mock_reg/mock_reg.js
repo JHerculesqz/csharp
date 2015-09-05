@@ -1,0 +1,5 @@
+CHNBMockOptions = function () {
+    return {
+MODULEJSONS
+    };
+};

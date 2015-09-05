@@ -22,6 +22,8 @@ namespace SuperJSBuilder.utils
         public static string KEY_MERGE_NAME = "mergeName";
         public static string KEY_REPLACE_DIR_PATH = "replaceDirPath";
         public static string KEY_MOCK_REG_LEVEL = "mockRegLevel";
+        public static string KEY_MOCK_REG_IS_CHECK = "mockRegIsCheck";
+        public static string KEY_MOCK_REG_IS_ENV_MOCK = "mockRegIsEnvMock";
 
         public static string TYPE_WALLE2 = "walle2";
         public static string TYPE_APP = "app";
