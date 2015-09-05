@@ -12,7 +12,7 @@ namespace SuperJSBuilder.gen.dir_app
         public static void gen(string strSrcDirPath)
         {
             Console.WriteLine("==============DirServiceApp start====================");
-            DirService._genByType(strSrcDirPath, "");
+            DirAdapter._genByType(strSrcDirPath, "");
             Console.WriteLine("==============DirServiceApp end====================");
         }
     }

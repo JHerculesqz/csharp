@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace SuperJSBuilder.utils
 {
-    class ConfigService
+    class ConfigAdapter
     {
         #region Const
 

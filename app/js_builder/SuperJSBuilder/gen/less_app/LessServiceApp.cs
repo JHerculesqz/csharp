@@ -10,21 +10,49 @@ namespace SuperJSBuilder.gen.less_app
 {
     class LessServiceApp
     {
+        public static void gen(string strSrcDirPath)
+        {
+            Console.WriteLine("==============LessServiceWalle2 start====================");
+            FileAdapterLess._genByType(strSrcDirPath, "", new FileAdapterLessApp());
+            Console.WriteLine("==============LessServiceWalle2 end====================");
+        }
+    }
+
+    #region FileAdapterLessApp
+
+    class FileAdapterLessApp : IFileAdapterLess
+    {
         #region Const
 
-        private static string FILE_PATH_SRC_LESS_APP()
+        private static string FILE_PATH_TEMPLATE_LESS()
         {
             var strFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/SuperJSBuilder/less_app/template.less");
             return strFilePath;
         }
 
+        private static string FILE_PATH_DST_LESS(string strSrcDirPath, string strSubDirPath, string strModuleName)
+        {
+            var strFilePath = Path.Combine(Path.Combine(Path.Combine(Path.Combine(strSrcDirPath, strSubDirPath), strModuleName), "less"), strModuleName + ".less");
+            return strFilePath;
+        }
+
         #endregion
 
-        public static void gen(string strSrcDirPath)
+        public string getPrefixName()
         {
-            Console.WriteLine("==============LessServiceWalle2 start====================");
-            FileServiceLess._genByType(strSrcDirPath, "", FILE_PATH_SRC_LESS_APP());
-            Console.WriteLine("==============LessServiceWalle2 end====================");
+            return "";
+        }
+
+        public string getTemplateFilePath()
+        {
+            return FILE_PATH_TEMPLATE_LESS();
+        }
+
+        public string getDstFilePath(string strSrcDirPath, string strSubDirPath, string strModuleName)
+        {
+            return FILE_PATH_DST_LESS(strSrcDirPath, strSubDirPath, strModuleName);
         }
     }
+
+    #endregion
 }

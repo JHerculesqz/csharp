@@ -1,5 +1,7 @@
 ﻿using SuperJSBuilder.gen.dir_app;
 using SuperJSBuilder.gen.dir_walle2;
+using SuperJSBuilder.gen.js_app;
+using SuperJSBuilder.gen.js_walle2;
 using SuperJSBuilder.gen.less_app;
 using SuperJSBuilder.gen.less_walle2;
 using SuperJSBuilder.merge.walle2;
@@ -17,19 +19,21 @@ namespace SuperJSBuilder
         static void Main(string[] args)
         {
             //1.config init
-            ConfigService.init();
+            ConfigAdapter.init();
 
             //2.wall2
             //2.1.gen
-            DirServiceWalle2.gen(ConfigService.getValue4WallE(ConfigService.KEY_SRC_DIR_PATH));
-            LessServiceWalle2.gen(ConfigService.getValue4WallE(ConfigService.KEY_SRC_DIR_PATH));
+            DirServiceWalle2.gen(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
+            LessServiceWalle2.gen(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
+            JSServiceWalle2.gen(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
             //2.2.merge
             MergeServiceWalle2.merge();
 
             //3.app
             //3.1.gen
-            DirServiceApp.gen(ConfigService.getValue4App(ConfigService.KEY_SRC_DIR_PATH));
-            LessServiceApp.gen(ConfigService.getValue4App(ConfigService.KEY_SRC_DIR_PATH));
+            DirServiceApp.gen(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
+            LessServiceApp.gen(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
+            JSServiceApp.gen(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
 
             Console.ReadLine();
         }
