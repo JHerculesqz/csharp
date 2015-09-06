@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SuperJSBuilder.gen.less_walle2
 {
-    class LessServiceWalle2
+    class GenLessServiceWalle2
     {
         public static void gen(string strSrcDirPath)
         {

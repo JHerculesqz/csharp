@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SuperJSBuilder.gen.dir_app
 {
-    class DirServiceApp
+    class GenDirServiceApp
     {
         public static void gen(string strSrcDirPath)
         {

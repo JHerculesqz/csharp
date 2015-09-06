@@ -9,7 +9,7 @@ using walle.utils;
 
 namespace SuperJSBuilder.gen.mock_reg
 {
-    class JSServiceMockReg
+    class GenJSServiceMockReg
     {
         #region Const
 

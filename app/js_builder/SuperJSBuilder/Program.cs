@@ -5,7 +5,8 @@ using SuperJSBuilder.gen.js_walle2;
 using SuperJSBuilder.gen.less_app;
 using SuperJSBuilder.gen.less_walle2;
 using SuperJSBuilder.gen.mock_reg;
-using SuperJSBuilder.merge.walle2;
+using SuperJSBuilder.merge.dir_app;
+using SuperJSBuilder.merge.dir_walle2;
 using SuperJSBuilder.utils;
 using System;
 using System.Collections.Generic;
@@ -24,21 +25,22 @@ namespace SuperJSBuilder
 
             //2.wall2
             //2.1.gen
-            DirServiceWalle2.gen(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
-            LessServiceWalle2.gen(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
-            JSServiceWalle2.gen(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
+            GenDirServiceWalle2.gen(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
+            GenLessServiceWalle2.gen(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
+            GenJSServiceWalle2.gen(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
             //2.2.merge
-            MergeServiceWalle2.merge();
+            MergeDirServiceWalle.merge(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
 
             //3.app
             //3.1.gen
-            DirServiceApp.gen(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
-            LessServiceApp.gen(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
-            JSServiceApp.gen(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
-            JSServiceMockReg.gen(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH),
+            GenDirServiceApp.gen(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
+            GenLessServiceApp.gen(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
+            GenJSServiceApp.gen(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
+            GenJSServiceMockReg.gen(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH),
                 ConfigAdapter.getValue4App(ConfigAdapter.KEY_MOCK_REG_LEVEL),
                 ConfigAdapter.getValue4App(ConfigAdapter.KEY_MOCK_REG_IS_CHECK),
                 ConfigAdapter.getValue4App(ConfigAdapter.KEY_MOCK_REG_IS_ENV_MOCK));
+            MergeDirServiceAPP.merge(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
 
             Console.ReadLine();
         }

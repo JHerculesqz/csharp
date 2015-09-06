@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SuperJSBuilder.merge.walle2.js
+namespace SuperJSBuilder.utils
 {
-    class MergeServiceWalle2JS
+    interface IMergeDirAdapter
     {
+        string getDstDirPath(string strSrcDirPath);
     }
 }

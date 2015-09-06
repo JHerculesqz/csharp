@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SuperJSBuilder.gen.js_walle2
 {
-    class JSServiceWalle2
+    class GenJSServiceWalle2
     {
         public static void gen(string strSrcDirPath)
         {

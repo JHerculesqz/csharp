@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SuperJSBuilder.gen.less_app
 {
-    class LessServiceApp
+    class GenLessServiceApp
     {
         public static void gen(string strSrcDirPath)
         {
