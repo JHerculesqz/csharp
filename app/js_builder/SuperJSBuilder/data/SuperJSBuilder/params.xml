@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <tasks>
   <task>
-    <param key="srcDirPath">C:\1.Monkey\1.Research\4.SCM_GIT\JS\walle2</param>
+    <param key="srcDirPath">C:\1.Monkey\1.Research\4.SCM\SCM_GIT\JS\walle2</param>
     <param key="mergeName">walle2.web</param>  
   </task>
   <task>
-    <param key="srcDirPath">C:\1.Monkey\1.Research\4.SCM_GIT\JS\app\ipcrystal</param>
+    <param key="srcDirPath">C:\1.Monkey\1.Research\4.SCM\SCM_GIT\JS\app\ipcrystal</param>
     <param key="mockRegLevel">IMPL</param>
     <param key="mockRegIsCheck">true</param>
     <param key="mockRegIsEnvMock">false</param>
     <param key="mergeName">ipcrystal.web</param>
-    <param key="replaceDirPath">C:\1.Monkey\1.Research\4.SCM_GIT\JS\</param>
+    <param key="replaceDirPath">C:\1.Monkey\1.Research\4.SCM\SCM_GIT\JS\</param>
   </task>
 </tasks>
