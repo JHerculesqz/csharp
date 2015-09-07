@@ -54,6 +54,7 @@
     <Compile Include="merge\image_walle2\MergeImageServiceWalle2.cs" />
     <Compile Include="merge\js_app\MergeJSServiceAPP.cs" />
     <Compile Include="merge\js_walle2\MergeJSServiceWalle2.cs" />
+    <Compile Include="merge\less_walle2\MergeLessServiceWalle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\ConfigAdapter.cs" />
@@ -106,7 +107,6 @@
     <Folder Include="gen\test_html\walle2_css\" />
     <Folder Include="gen\test_html\walle2_js\" />
     <Folder Include="merge\less_app\" />
-    <Folder Include="merge\less_walle2\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="data\SuperJSBuilder\mock_reg\mock_reg_part.js">
