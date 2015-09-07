@@ -37,5 +37,10 @@ namespace SuperJSBuilder.merge.js_walle2
         {
             return Path.Combine(new DirectoryInfo(strSrcDirPath).Parent.FullName, "lib/walle2/js/walle2.web.js");
         }
+
+        public string getDstFilePathMinJS(string strSrcDirPath)
+        {
+            return Path.Combine(new DirectoryInfo(strSrcDirPath).Parent.FullName, "lib/walle2/js/walle2.web.min.js");
+        }
     }
 }

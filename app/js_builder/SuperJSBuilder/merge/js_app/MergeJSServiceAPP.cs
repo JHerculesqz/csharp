@@ -35,5 +35,10 @@ namespace SuperJSBuilder.merge.js_app
         {
             return Path.Combine(strSrcDirPath, "bin/js/app.js");
         }
+
+        public string getDstFilePathMinJS(string strSrcDirPath)
+        {
+            return Path.Combine(strSrcDirPath, "bin/js/app.min.js");
+        }
     }
 }

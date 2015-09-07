@@ -71,6 +71,9 @@
     <Compile Include="utils\ModuleNameAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\SuperJSBuilder\yuicompressor-2.4.8.jar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="App.config" />
     <Content Include="data\SuperJSBuilder\js_app\template.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

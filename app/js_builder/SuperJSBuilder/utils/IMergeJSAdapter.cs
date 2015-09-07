@@ -13,5 +13,7 @@ namespace SuperJSBuilder.utils
         string getIgnoreName();
 
         string getDstFilePathJS(string strSrcDirPath);
+
+        string getDstFilePathMinJS(string strSrcDirPath);
     }
 }

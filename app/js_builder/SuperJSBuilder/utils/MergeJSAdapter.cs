@@ -51,6 +51,10 @@ namespace SuperJSBuilder.utils
             Console.WriteLine(new FileInfo(strDstFilePathJS).Name);
 
             //4.minify js
+            var strYUIPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data/SuperJSBuilder/yuicompressor-2.4.8.jar");
+            var strDstFilePathMinJS = oIMergeJSAdapter.getDstFilePathMinJS(strSrcDirPath);
+            JSMinifyUtils.minifyJS(strYUIPath, strDstFilePathJS, strDstFilePathMinJS);
+            Console.WriteLine(new FileInfo(strDstFilePathMinJS).Name);
         }
     }
 }
