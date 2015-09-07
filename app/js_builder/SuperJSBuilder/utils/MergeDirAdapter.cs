@@ -21,22 +21,22 @@ namespace SuperJSBuilder.utils
             if (!Directory.Exists(strDstDirPath))
             {
                 Directory.CreateDirectory(strDstDirPath);
-                Console.WriteLine(strDstDirPath);
+                Console.WriteLine(new DirectoryInfo(strDstDirPath).Name);
             }
             if (!Directory.Exists(strDstDirPathImage))
             {
                 Directory.CreateDirectory(strDstDirPathImage);
-                Console.WriteLine(strDstDirPathImage);
+                Console.WriteLine(new DirectoryInfo(strDstDirPathImage).Name);
             }
             if (!Directory.Exists(strDstDirPathLess))
             {
                 Directory.CreateDirectory(strDstDirPathLess);
-                Console.WriteLine(strDstDirPathLess);
+                Console.WriteLine(new DirectoryInfo(strDstDirPathLess).Name);
             }
             if (!Directory.Exists(strDstDirPathJs))
             {
                 Directory.CreateDirectory(strDstDirPathJs);
-                Console.WriteLine(strDstDirPathJs);
+                Console.WriteLine(new DirectoryInfo(strDstDirPathJs).Name);
             }
         }
     }

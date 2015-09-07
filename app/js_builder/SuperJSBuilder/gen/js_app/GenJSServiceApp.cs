@@ -12,12 +12,12 @@ namespace SuperJSBuilder.gen.js_app
     {
         public static void gen(string strSrcDirPath)
         {
-            Console.WriteLine("==============JSServiceAPP start====================");
+            Console.WriteLine("==============GenJSServiceApp start====================");
             GenFileAdapterJS._genByType(strSrcDirPath, "", new FileAdapterJSAppJS());
             GenFileAdapterJS._genByType(strSrcDirPath, "", new FileAdapterJSAppMainJS());
             GenFileAdapterJS._genByType(strSrcDirPath, "", new FileAdapterJSAppMockJS());
             GenFileAdapterJS._genByType(strSrcDirPath, "", new FileAdapterJSAppRegJS());
-            Console.WriteLine("==============JSServiceAPP end====================");
+            Console.WriteLine("==============GenJSServiceApp end====================");
         }
     }
 

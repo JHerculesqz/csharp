@@ -12,9 +12,9 @@ namespace SuperJSBuilder.gen.less_app
     {
         public static void gen(string strSrcDirPath)
         {
-            Console.WriteLine("==============LessServiceWalle2 start====================");
+            Console.WriteLine("==============GenLessServiceApp start====================");
             GenFileAdapterLess._genByType(strSrcDirPath, "", new FileAdapterLessApp());
-            Console.WriteLine("==============LessServiceWalle2 end====================");
+            Console.WriteLine("==============GenLessServiceApp end====================");
         }
     }
 

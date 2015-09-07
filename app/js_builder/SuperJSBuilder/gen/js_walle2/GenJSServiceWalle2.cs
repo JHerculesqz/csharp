@@ -12,11 +12,11 @@ namespace SuperJSBuilder.gen.js_walle2
     {
         public static void gen(string strSrcDirPath)
         {
-            Console.WriteLine("==============JSServiceWalle2 start====================");
+            Console.WriteLine("==============GenJSServiceWalle2 start====================");
             GenFileAdapterJS._genByType(strSrcDirPath, "core", new FileAdapterJSWalle2());
             GenFileAdapterJS._genByType(strSrcDirPath, "component", new FileAdapterJSWalle2());
             GenFileAdapterJS._genByType(strSrcDirPath, "widget", new FileAdapterJSWalle2());
-            Console.WriteLine("==============JSServiceWalle2 end====================");
+            Console.WriteLine("==============GenJSServiceWalle2 end====================");
         }
     }
 

@@ -11,9 +11,9 @@ namespace SuperJSBuilder.gen.dir_app
     {
         public static void gen(string strSrcDirPath)
         {
-            Console.WriteLine("==============DirServiceApp start====================");
+            Console.WriteLine("==============GenDirServiceApp start====================");
             GenDirAdapter._genByType(strSrcDirPath, "");
-            Console.WriteLine("==============DirServiceApp end====================");
+            Console.WriteLine("==============GenDirServiceApp end====================");
         }
     }
 }

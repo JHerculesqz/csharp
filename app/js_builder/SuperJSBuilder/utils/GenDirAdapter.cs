@@ -47,25 +47,25 @@ namespace SuperJSBuilder.utils
                 {
                     var strDirPath = DIR_PATH_DST_IN_X(strSrcDirPath, strLine, strSubDirPath);
                     Directory.CreateDirectory(strDirPath);
-                    Console.WriteLine("Dir:" + strDirPath);
+                    Console.WriteLine("Dir:" + new DirectoryInfo(strDirPath).Name);
                 }
                 if (!Directory.Exists(DIR_PATH_IMAGE_IN_X(strSrcDirPath, strLine, strSubDirPath)))
                 {
                     var strDirPath = DIR_PATH_IMAGE_IN_X(strSrcDirPath, strLine, strSubDirPath);
                     Directory.CreateDirectory(strDirPath);
-                    Console.WriteLine("Dir:" + strDirPath);
+                    Console.WriteLine("Dir:" + new DirectoryInfo(strDirPath).Name);
                 }
                 if (!Directory.Exists(DIR_PATH_JS_IN_X(strSrcDirPath, strLine, strSubDirPath)))
                 {
                     var strDirPath = DIR_PATH_JS_IN_X(strSrcDirPath, strLine, strSubDirPath);
                     Directory.CreateDirectory(strDirPath);
-                    Console.WriteLine("Dir:" + strDirPath);
+                    Console.WriteLine("Dir:" + new DirectoryInfo(strDirPath).Name);
                 }
                 if (!Directory.Exists(DIR_PATH_LESS_IN_X(strSrcDirPath, strLine, strSubDirPath)))
                 {
                     var strDirPath = DIR_PATH_LESS_IN_X(strSrcDirPath, strLine, strSubDirPath);
                     Directory.CreateDirectory(strDirPath);
-                    Console.WriteLine("Dir:" + strDirPath);
+                    Console.WriteLine("Dir:" + new DirectoryInfo(strDirPath).Name);
                 }
             }
         }

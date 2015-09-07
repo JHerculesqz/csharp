@@ -1,32 +1,41 @@
-﻿using System;
+﻿using SuperJSBuilder.utils;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using walle.utils;
 
 namespace SuperJSBuilder.merge.image_walle2
 {
     class MergeImageServiceWalle2
     {
-        #region Const
+        public static void merge(string strSrcDirPath)
+        {
+            Console.WriteLine("========================MergeImageServiceWalle2 start=========================");
+            MergeImgAdapter.merge(strSrcDirPath, "core", new MergeImageAdaterWallE());
+            MergeImgAdapter.merge(strSrcDirPath, "component", new MergeImageAdaterWallE());
+            MergeImgAdapter.merge(strSrcDirPath, "widget", new MergeImageAdaterWallE());
+            Console.WriteLine("========================MergeImageServiceWalle2 end=========================");
+        }
+    }
 
-        private static string IMG_TYPE_PNG = ".png";
-        private static string IMG_TYPE_CUR = ".cur";
+    class MergeImageAdaterWallE : IMergeImageAdapter
+    {
+        public string getSrcDirPathImg(string strSrcDirPath, string strSubDirName)
+        {
+            return Path.Combine(strSrcDirPath, strSubDirName);
+        }
 
-        #endregion
+        public string getIgnoreName()
+        {
+            return string.Empty;
+        }
 
-        public static void merge()
-        { 
-            //0.get srcDirPath
-
-            //1.get all image files
-
-            //2.get dstDirPath
-
-            //create dstDirPath
-
-            //3.copy
-
+        public string getDstFilePathImg(string strSrcDirPath, string strImgFileName)
+        {
+            return Path.Combine(Path.Combine(new DirectoryInfo(strSrcDirPath).Parent.FullName, "lib/walle2/image"), strImgFileName);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace SuperJSBuilder.gen.mock_reg
 
         public static void gen(string strSrcDirPath, string strLevel, string strIsCheck, string strIsEnvMock)
         {
-            Console.WriteLine("==============JSServiceMockReg start====================");
+            Console.WriteLine("==============GenJSServiceMockReg start====================");
 
             //1.get template
             var strTemplate = File.ReadAllText(FILE_PATH_TEMPLATE());
@@ -72,7 +72,7 @@ namespace SuperJSBuilder.gen.mock_reg
             //4.write file
             File.WriteAllText(FILE_PATH_DST(strSrcDirPath, ""), strRes);
 
-            Console.WriteLine("==============JSServiceMockReg end====================");
+            Console.WriteLine("==============GenJSServiceMockReg end====================");
         }
     }
 }

@@ -40,7 +40,7 @@ namespace SuperJSBuilder.utils
 
                     //4.write content
                     File.WriteAllText(strDstFilePath, strContent);
-                    Console.WriteLine("File:" + strDstFilePath);
+                    Console.WriteLine("File:" + new FileInfo(strDstFilePath).Name);
                 }
             }
         }

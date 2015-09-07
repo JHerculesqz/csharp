@@ -50,7 +50,10 @@
     <Compile Include="gen\mock_reg\GenJSServiceMockReg.cs" />
     <Compile Include="merge\dir_app\MergeDirServiceAPP.cs" />
     <Compile Include="merge\dir_walle2\MergeDirServiceWalle.cs" />
+    <Compile Include="merge\image_app\MergeImageServiceAPP.cs" />
     <Compile Include="merge\image_walle2\MergeImageServiceWalle2.cs" />
+    <Compile Include="merge\js_app\MergeJSServiceAPP.cs" />
+    <Compile Include="merge\js_walle2\MergeJSServiceWalle2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\ConfigAdapter.cs" />
@@ -60,7 +63,11 @@
     <Compile Include="utils\IGenFileAdapterLess.cs" />
     <Compile Include="utils\IGenFileAdapterJS.cs" />
     <Compile Include="utils\IMergeDirAdapter.cs" />
+    <Compile Include="utils\IMergeJSAdapter.cs" />
+    <Compile Include="utils\IMergeImageAdapter.cs" />
     <Compile Include="utils\MergeDirAdapter.cs" />
+    <Compile Include="utils\MergeJSAdapter.cs" />
+    <Compile Include="utils\MergeImgAdapter.cs" />
     <Compile Include="utils\ModuleNameAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -95,9 +102,6 @@
     <Folder Include="gen\test_html\lib_js\" />
     <Folder Include="gen\test_html\walle2_css\" />
     <Folder Include="gen\test_html\walle2_js\" />
-    <Folder Include="merge\image_app\" />
-    <Folder Include="merge\js_app\" />
-    <Folder Include="merge\js_walle2\" />
     <Folder Include="merge\less_app\" />
     <Folder Include="merge\less_walle2\" />
   </ItemGroup>

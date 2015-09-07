@@ -7,6 +7,10 @@ using SuperJSBuilder.gen.less_walle2;
 using SuperJSBuilder.gen.mock_reg;
 using SuperJSBuilder.merge.dir_app;
 using SuperJSBuilder.merge.dir_walle2;
+using SuperJSBuilder.merge.image_app;
+using SuperJSBuilder.merge.image_walle2;
+using SuperJSBuilder.merge.js_app;
+using SuperJSBuilder.merge.js_walle2;
 using SuperJSBuilder.utils;
 using System;
 using System.Collections.Generic;
@@ -30,6 +34,8 @@ namespace SuperJSBuilder
             GenJSServiceWalle2.gen(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
             //2.2.merge
             MergeDirServiceWalle.merge(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
+            MergeImageServiceWalle2.merge(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
+            MergeJSServiceWalle2.merge(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
 
             //3.app
             //3.1.gen
@@ -41,6 +47,8 @@ namespace SuperJSBuilder
                 ConfigAdapter.getValue4App(ConfigAdapter.KEY_MOCK_REG_IS_CHECK),
                 ConfigAdapter.getValue4App(ConfigAdapter.KEY_MOCK_REG_IS_ENV_MOCK));
             MergeDirServiceAPP.merge(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
+            MergeImageServiceAPP.merge(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
+            MergeJSServiceAPP.merge(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
 
             Console.ReadLine();
         }

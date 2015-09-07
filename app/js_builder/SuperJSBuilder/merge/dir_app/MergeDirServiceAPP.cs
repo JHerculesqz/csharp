@@ -12,9 +12,9 @@ namespace SuperJSBuilder.merge.dir_app
     {
         public static void merge(string strSrcDirPath)
         {
-            Console.WriteLine("========================MergeDirServiceWalle start=======================");
+            Console.WriteLine("========================MergeDirServiceAPP start=======================");
             MergeDirAdapter.mergeByType(strSrcDirPath, new MergeDirAdapterWallE());
-            Console.WriteLine("========================MergeDirServiceWalle end=======================");
+            Console.WriteLine("========================MergeDirServiceAPP end=======================");
         }
     }
 
