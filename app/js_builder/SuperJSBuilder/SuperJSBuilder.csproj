@@ -72,7 +72,7 @@
     <Compile Include="utils\ModuleNameAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="data\SuperJSBuilder\yuicompressor-2.4.8.jar">
+    <Content Include="data\SuperJSBuilder\yuicompressor-2.4.7.jar">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="App.config" />
