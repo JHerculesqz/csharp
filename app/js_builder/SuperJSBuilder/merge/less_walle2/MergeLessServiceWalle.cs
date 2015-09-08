@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SuperJSBuilder.utils;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,18 +12,18 @@ namespace SuperJSBuilder.merge.less_walle2
     {
         public static void merge(string strSrcDirPath)
         {
-            Console.WriteLine("========================MergeJSServiceWalle2 start=========================");
-            //var strContent = MergeLessAdapter.merge(strSrcDirPath, "core", new MergeLessAdaterWallE());
-            //strContent += MergeLessAdapter.merge(strSrcDirPath, "component", new MergeLessAdaterWallE());
-            //strContent += MergeLessAdapter.merge(strSrcDirPath, "widget", new MergeLessAdaterWallE());
-            //MergeJSAdapter.minify(strSrcDirPath, strContent, new MergeLessAdaterWallE());
-            Console.WriteLine("========================MergeJSServiceWalle2 end=========================");
+            Console.WriteLine("========================MergeLessServiceWalle start=========================");
+            var strContent = MergeLessAdapter.merge(strSrcDirPath, "core", new MergeLessAdaterWallE());
+            strContent += MergeLessAdapter.merge(strSrcDirPath, "component", new MergeLessAdaterWallE());
+            strContent += MergeLessAdapter.merge(strSrcDirPath, "widget", new MergeLessAdaterWallE());
+            MergeLessAdapter.minify(strSrcDirPath, strContent, new MergeLessAdaterWallE());
+            Console.WriteLine("========================MergeLessServiceWalle end=========================");
         }
     }
 
-    class MergeLessAdaterWallE// : IMergeLessAdapter
+    class MergeLessAdaterWallE : IMergeLessAdapter
     {
-        public string getSrcDirPathCss(string strSrcDirPath, string strSubDirName)
+        public string getSrcDirPathLess(string strSrcDirPath, string strSubDirName)
         {
             return Path.Combine(strSrcDirPath, strSubDirName);
         }
@@ -32,12 +33,12 @@ namespace SuperJSBuilder.merge.less_walle2
             return "\\test\\";
         }
 
-        public string getDstFilePathCss(string strSrcDirPath)
+        public string getDstFilePathLess(string strSrcDirPath)
         {
             return Path.Combine(new DirectoryInfo(strSrcDirPath).Parent.FullName, "lib/walle2/less/walle2.web.less");
         }
 
-        public string getDstFilePathMinCss(string strSrcDirPath)
+        public string getDstFilePathMinLess(string strSrcDirPath)
         {
             return Path.Combine(new DirectoryInfo(strSrcDirPath).Parent.FullName, "lib/walle2/less/walle2.web.min.css");
         }

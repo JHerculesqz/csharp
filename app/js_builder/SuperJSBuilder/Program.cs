@@ -11,6 +11,7 @@ using SuperJSBuilder.merge.image_app;
 using SuperJSBuilder.merge.image_walle2;
 using SuperJSBuilder.merge.js_app;
 using SuperJSBuilder.merge.js_walle2;
+using SuperJSBuilder.merge.less_walle2;
 using SuperJSBuilder.utils;
 using System;
 using System.Collections.Generic;
@@ -36,6 +37,7 @@ namespace SuperJSBuilder
             MergeDirServiceWalle.merge(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
             MergeImageServiceWalle2.merge(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
             MergeJSServiceWalle2.merge(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
+            MergeLessServiceWalle.merge(ConfigAdapter.getValue4WallE(ConfigAdapter.KEY_SRC_DIR_PATH));
 
             //3.app
             //3.1.gen
@@ -49,6 +51,7 @@ namespace SuperJSBuilder
             MergeDirServiceAPP.merge(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
             MergeImageServiceAPP.merge(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
             MergeJSServiceAPP.merge(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
+            MergeLessServiceAPP.merge(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
 
             Console.ReadLine();
         }

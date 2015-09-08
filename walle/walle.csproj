@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\FileUtils.cs" />
+    <Compile Include="utils\LessMinifyUtils.cs" />
     <Compile Include="utils\JSMinifyUtils.cs" />
     <Compile Include="utils\StringUtils.cs" />
   </ItemGroup>

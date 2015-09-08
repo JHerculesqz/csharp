@@ -31,8 +31,6 @@ namespace walle.utils
             oProcess.WaitForExit();
             oProcess.Close();
             reader.Close();
-
-            Console.WriteLine(strArgs);
         }
     }
 }
