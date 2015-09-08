@@ -13,7 +13,7 @@ namespace walle.utils
         public static void minifyJS(string strYUIPath, string strSrcFilePath, string strDstFilePath)
         {
             var strFileName = "java";
-            var strArgs = "-jar " + strYUIPath + " --type js --charset utf-8 " + strSrcFilePath + " -o " + strDstFilePath;
+            var strArgs = "-jar " + strYUIPath + " --type js --charset utf-8 " + strSrcFilePath + " > " + strDstFilePath;
             ProcessStartInfo p = new ProcessStartInfo();
             p.FileName = strFileName;
             p.Arguments = strArgs;
