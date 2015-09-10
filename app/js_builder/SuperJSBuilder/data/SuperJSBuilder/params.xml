@@ -10,6 +10,6 @@
     <param key="mockRegIsCheck">true</param>
     <param key="mockRegIsEnvMock">false</param>
     <param key="mergeName">ipcrystal.web</param>
-    <param key="replaceDirPath">C:\1.Monkey\1.Research\4.SCM\SCM_GIT\JS\</param>
+    <param key="srcDirPathPrefix">C:\1.Monkey\1.Research\4.SCM\SCM_GIT\JS\</param>
   </task>
 </tasks>

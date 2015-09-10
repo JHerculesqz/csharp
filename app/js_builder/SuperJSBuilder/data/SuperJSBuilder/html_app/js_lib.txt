@@ -1,0 +1,15 @@
+﻿<script src="../../../lib/jquery-1.11.3/js/jquery.min.js" type="text/javascript"></script>
+<script src="../../../lib/jqueryui/jquery-ui.js" type="text/javascript"></script>
+<script src="../../../lib/bootstrap-3.3.4-dist/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../lib/colorpicker/js/evol.colorpicker.min.js" type="text/javascript"></script>
+<script src="../../../lib/datepicker/WdatePicker.js" type="text/javascript"></script>
+<script src="../../../lib/echarts/echarts-all.js" type="text/javascript"></script>
+<script src="../../../lib/highcharts/highcharts.js" type="text/javascript"></script>
+<!--<script src="../../../lib/highcharts/exporting.js" type="text/javascript"></script>-->
+<script src="../../../lib/jqgrid/jquery.jqGrid.js" type="text/javascript"></script>
+<script src="../../../lib/jqgrid/grid.locale-en.js" type="text/javascript"></script>
+<script src="../../../lib/jquery-cookie/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="../../../lib/toastr/js/glimpse.js" type="text/javascript"></script>
+<script src="../../../lib/toastr/js/glimpse.toastr.js" type="text/javascript"></script>
+<script src="../../../lib/toastr/js/toastr.js" type="text/javascript"></script>
+<script src="../../../lib/walle2/js/walle2.web.js" type="text/javascript"></script>

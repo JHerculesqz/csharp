@@ -48,6 +48,12 @@
     <Compile Include="gen\less_app\GenLessServiceApp.cs" />
     <Compile Include="gen\less_walle2\GenLessServiceWalle2.cs" />
     <Compile Include="gen\mock_reg\GenJSServiceMockReg.cs" />
+    <Compile Include="gen\test_html\GenCssAppAdapter.cs" />
+    <Compile Include="gen\test_html\GenJSModuleAppAdapter.cs" />
+    <Compile Include="gen\test_html\GenJSAppAdapter.cs" />
+    <Compile Include="gen\test_html\GenJSLibAdapter.cs" />
+    <Compile Include="gen\test_html\GenCssLibAdapter.cs" />
+    <Compile Include="gen\test_html\GenHtmlServiceAPP.cs" />
     <Compile Include="merge\dir_app\MergeDirServiceAPP.cs" />
     <Compile Include="merge\dir_walle2\MergeDirServiceWalle.cs" />
     <Compile Include="merge\image_app\MergeImageServiceAPP.cs" />
@@ -75,6 +81,21 @@
     <Compile Include="utils\ModuleNameAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\SuperJSBuilder\html_app\css_app.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperJSBuilder\html_app\js_app.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperJSBuilder\html_app\js_lib.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperJSBuilder\html_app\css_lib.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperJSBuilder\html_app\test_app.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\SuperJSBuilder\node_modules\.bin\node.exe" />
     <Content Include="data\SuperJSBuilder\node_modules\less-plugin-clean-css\lib\clean-css-processor.js" />
     <Content Include="data\SuperJSBuilder\node_modules\less-plugin-clean-css\lib\index.js" />
@@ -1116,15 +1137,7 @@
     <None Include="data\SuperJSBuilder\node_modules\less\test\sourcemaps\basic.json" />
     <None Include="data\SuperJSBuilder\node_modules\less\test\sourcemaps\maps\import-map.map" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="gen\test_html\app_css\" />
-    <Folder Include="gen\test_html\app_js\" />
-    <Folder Include="gen\test_html\app_mock\" />
-    <Folder Include="gen\test_html\lib_css\" />
-    <Folder Include="gen\test_html\lib_js\" />
-    <Folder Include="gen\test_html\walle2_css\" />
-    <Folder Include="gen\test_html\walle2_js\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="data\SuperJSBuilder\mock_reg\mock_reg_part.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
