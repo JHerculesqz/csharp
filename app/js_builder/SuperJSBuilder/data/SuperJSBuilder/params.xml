@@ -5,7 +5,7 @@
     <param key="mergeName">walle2.web</param>  
   </task>
   <task>
-    <param key="srcDirPath">C:\1.Monkey\1.Research\4.SCM\SCM_GIT\JS\app\ipcrystal</param>
+    <param key="srcDirPath">C:\1.Monkey\1.Research\4.SCM\SCM_GIT\JS\app\app1</param>
     <param key="mockRegLevel">IMPL</param>
     <param key="mockRegIsCheck">true</param>
     <param key="mockRegIsEnvMock">false</param>
