@@ -31,6 +31,11 @@ namespace SuperJSBuilder.merge.less_walle2
             return "\\bin\\";
         }
 
+        public string getImportLess()
+        {
+            return string.Empty;
+        }
+
         public string getDstFilePathLess(string strSrcDirPath)
         {
             return Path.Combine(strSrcDirPath, "bin/less/app.less");

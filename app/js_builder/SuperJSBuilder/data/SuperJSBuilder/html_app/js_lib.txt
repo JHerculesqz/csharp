@@ -5,7 +5,7 @@
 <script src="../../../lib/datepicker/WdatePicker.js" type="text/javascript"></script>
 <script src="../../../lib/echarts/echarts-all.js" type="text/javascript"></script>
 <script src="../../../lib/highcharts/highcharts.js" type="text/javascript"></script>
-<!--<script src="../../../lib/highcharts/exporting.js" type="text/javascript"></script>-->
+<script src="../../../lib/highcharts/exporting.js" type="text/javascript"></script>
 <script src="../../../lib/jqgrid/jquery.jqGrid.js" type="text/javascript"></script>
 <script src="../../../lib/jqgrid/grid.locale-en.js" type="text/javascript"></script>
 <script src="../../../lib/jquery-cookie/js/jquery.cookie.js" type="text/javascript"></script>

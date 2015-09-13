@@ -11,6 +11,8 @@ namespace SuperJSBuilder.utils
 
         string getIgnoreName();
 
+        string getImportLess();
+
         string getDstFilePathLess(string strSrcDirPath);
 
         string getDstFilePathMinLess(string strSrcDirPath);

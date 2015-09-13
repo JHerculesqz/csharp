@@ -30,7 +30,7 @@ namespace SuperJSBuilder.merge.image_walle2
 
         public string getIgnoreName()
         {
-            return string.Empty;
+            return "\\test\\";
         }
 
         public string getDstFilePathImg(string strSrcDirPath, string strImgFileName)

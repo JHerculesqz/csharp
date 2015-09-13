@@ -53,6 +53,10 @@ namespace SuperJSBuilder.gen.test_html
 
             //6.insertTo
             var strTemplateHtml = File.ReadAllText(_getFilePathTemplate());
+            if (File.Exists(_getFilePathDst(strSrcDirPath)))
+            {
+                strTemplateHtml = File.ReadAllText(_getFilePathDst(strSrcDirPath));
+            }
             _insertTo(strCssLibContent, GenCssLibAdapter.START_TAG, GenCssLibAdapter.END_TAG, ref strTemplateHtml);
             _insertTo(strCssAppContent, GenCssAppAdapter.START_TAG, GenCssAppAdapter.END_TAG, ref strTemplateHtml);
             _insertTo(strJSLibContent, GenJSLibAdapter.START_TAG, GenJSLibAdapter.END_TAG, ref strTemplateHtml);

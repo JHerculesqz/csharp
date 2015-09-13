@@ -40,6 +40,12 @@ namespace SuperJSBuilder.utils
                 strContent += File.ReadAllText(oFileLess.FullName) + Environment.NewLine;
             }
 
+            //3.replace less import
+            if (!string.IsNullOrEmpty(oIMergeLessAdapter.getImportLess()))
+            {
+                strContent = strContent.Replace(oIMergeLessAdapter.getImportLess(), string.Empty);
+            }
+
             return strContent;
         }
 

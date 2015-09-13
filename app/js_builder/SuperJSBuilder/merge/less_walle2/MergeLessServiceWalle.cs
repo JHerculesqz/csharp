@@ -33,6 +33,11 @@ namespace SuperJSBuilder.merge.less_walle2
             return "\\test\\";
         }
 
+        public string getImportLess()
+        {
+            return "@import \"../../../../walle2/component/uiconst/less/uiconst\";";
+        }
+
         public string getDstFilePathLess(string strSrcDirPath)
         {
             return Path.Combine(new DirectoryInfo(strSrcDirPath).Parent.FullName, "lib/walle2/less/walle2.web.less");
