@@ -55,6 +55,10 @@ namespace SuperJSBuilder
             MergeLessServiceAPP.merge(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH));
             GenHtmlServiceAPP.gen(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH),
                 ConfigAdapter.getValue4App(ConfigAdapter.KEY_REPLACE_DIR_PATH));
+            GenHtmlMinServiceAPP.gen(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH),
+                ConfigAdapter.getValue4App(ConfigAdapter.KEY_APP_NAME));
+            GenHtmlJSPServiceAPP.gen(ConfigAdapter.getValue4App(ConfigAdapter.KEY_SRC_DIR_PATH),
+                ConfigAdapter.getValue4App(ConfigAdapter.KEY_APP_NAME));
 
             Console.ReadLine();
         }

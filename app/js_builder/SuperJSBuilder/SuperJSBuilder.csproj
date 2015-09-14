@@ -49,6 +49,8 @@
     <Compile Include="gen\less_walle2\GenLessServiceWalle2.cs" />
     <Compile Include="gen\mock_reg\GenJSServiceMockReg.cs" />
     <Compile Include="gen\test_html\GenCssAppAdapter.cs" />
+    <Compile Include="gen\test_html\GenHtmlJSPServiceAPP.cs" />
+    <Compile Include="gen\test_html\GenHtmlMinServiceAPP.cs" />
     <Compile Include="gen\test_html\GenJSModuleAppAdapter.cs" />
     <Compile Include="gen\test_html\GenJSAppAdapter.cs" />
     <Compile Include="gen\test_html\GenJSLibAdapter.cs" />
@@ -93,6 +95,9 @@
     <Content Include="data\SuperJSBuilder\html_app\css_lib.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="data\SuperJSBuilder\html_app\test_app.jsp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="data\SuperJSBuilder\html_app\test_app.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

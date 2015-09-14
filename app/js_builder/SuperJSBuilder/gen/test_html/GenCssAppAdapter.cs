@@ -29,6 +29,8 @@ namespace SuperJSBuilder.gen.test_html
         public static string START_TAG = "<!--css.app start-->";
         public static string END_TAG = "<!--css.app end-->";
 
+        public static string REQUIRE_LESS_PATH = "app/{0}/bin/less/app.min.css";
+
         #endregion
 
         public static string gen(string strDstDirPath, string strDstDirPathPrefix)
@@ -58,6 +60,20 @@ namespace SuperJSBuilder.gen.test_html
                     strContent += Environment.NewLine;
                 }
             }
+
+            return strContent;
+        }
+
+        public static string gen4Min(string strAppName)
+        {
+            //1.get template
+            var strFilePathTemplate = _getFilePathTemplate();
+            var strTemplate = File.ReadAllText(strFilePathTemplate);
+
+            //2.生成
+            var strContent = "";
+            strContent += strTemplate.Replace(REPLACE_PATH, string.Format(REQUIRE_LESS_PATH, strAppName));
+            strContent += Environment.NewLine;
 
             return strContent;
         }

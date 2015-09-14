@@ -9,7 +9,8 @@
     <param key="mockRegLevel">IMPL</param>
     <param key="mockRegIsCheck">true</param>
     <param key="mockRegIsEnvMock">false</param>
-    <param key="mergeName">ipcrystal.web</param>
+    <param key="mergeName">app1.web</param>
+    <param key="appName">app1</param>
     <param key="srcDirPathPrefix">C:\1.Monkey\1.Research\4.SCM\SCM_GIT\JS\</param>
   </task>
 </tasks>
