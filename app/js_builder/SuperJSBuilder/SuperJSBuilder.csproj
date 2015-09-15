@@ -717,6 +717,9 @@
     <None Include="data\SuperJSBuilder\less_walle2\template.less">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="data\SuperJSBuilder\node_modules.rar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="data\SuperJSBuilder\node_modules\.bin\lessc" />
     <None Include="data\SuperJSBuilder\node_modules\.bin\lessc.cmd" />
     <None Include="data\SuperJSBuilder\node_modules\.bin\npm" />
