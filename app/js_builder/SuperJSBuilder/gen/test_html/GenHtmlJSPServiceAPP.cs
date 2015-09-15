@@ -32,7 +32,7 @@ namespace SuperJSBuilder.gen.test_html
 
         private static string _replaceContent(string strContent)
         {
-            return strContent.Replace("../../../", "ipps/");
+            return strContent.Replace("../../../", "ipps/javascript/");
         }
 
         #endregion
