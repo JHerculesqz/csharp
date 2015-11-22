@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "SMK测试";
+}
+@*<h2>@ViewBag.Title</h2>*@
+@*<h3>@ViewBag.Message</h3>*@
+<script src="~/app/app_dashboard/_2_smk/js/_2_smk.plugin.js"></script>
+<script src="~/app/app_dashboard/_2_smk/js/_2_smk.js"></script>
+<script>
+    $(document).ready(function () {
+        var oSMK = new $.SMK();
+
+        oSMK.init(function () {
+            oSMK.getData();
+            oSMK.reDraw();
+        }, 1);
+
+        oSMK.bindEvent(function (iLastMon) {
+            oSMK.init(function () {
+                oSMK.getData();
+                oSMK.reDraw();
+            }, iLastMon);
+        });
+    });
+</script>
+<h2></h2>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <select class="selectpicker" style="float:left" id="m_comboBoxBranch">
+            <option>master</option>
+            <option>branch1</option>
+            <option>branch2</option>
+            <option>branch3</option>
+            <option>branch4</option>
+            <option>branch5</option>
+            <option>branch6</option>
+            <option>branch7</option>
+            <option>branch8</option>
+            <option>branch9</option>
+            <option>branch10</option>
+        </select>
+
+        <select class="selectpicker" style="float:left" id="m_comboBoxAutoType">
+            <option>UI自动化</option>
+            <option>仿真自动化</option>
+        </select>
+
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default" id="m_btnAllMon">全部</button>
+            <button type="button" class="btn btn-default" id="m_btnLast3Mon">近3月</button>
+            <button type="button" class="btn btn-default" id="m_btnLast2Mon">近2月</button>
+            <button type="button" class="btn btn-default" id="m_btnLast1Mon">近1月</button>
+        </div>
+
+        <div style="clear:both;"></div>
+
+        <div style="width:1100px;height:450px;margin-top:10px;" id="m_panel"></div>
+    </div>
+</div>

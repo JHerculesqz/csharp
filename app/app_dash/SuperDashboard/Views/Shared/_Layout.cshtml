@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @*@Styles.Render("~/lib/bootstrap")*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    <link href="~/lib/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/Site.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" />
+    <script src="~/lib/jquery/jquery-1.10.2.min.js"></script>
+    <script src="~/lib/bootstrap/bootstrap.min.js"></script>
+    <script src="~/lib/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="~/lib/echarts-2.2.7/echarts-all.js"></script>
+    <script src="~/walle2/widget/echart_line.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("IPCrystal", "Index", "HNB", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "HNB")</li>
+                    <li>@Html.ActionLink("编译构建", "_1_build_deploy", "HNB")</li>
+                    <li>@Html.ActionLink("SMK测试", "_2_smk", "HNB")</li>
+                    <li>@Html.ActionLink("验收测试", "_3_ys", "HNB")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - IPCrystal</p>
+        </footer>
+    </div>
+
+    @*@Scripts.Render("~/bundles/jquery")*@
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @*@RenderSection("scripts", required: false)*@
+</body>
+</html>
