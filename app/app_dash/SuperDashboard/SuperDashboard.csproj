@@ -228,7 +228,7 @@
     <Content Include="lib\other\respond.js" />
     <Content Include="lib\other\respond.min.js" />
     <Content Include="lib\other\_references.js" />
-    <Content Include="walle2\widget\echart_line.js" />
+    <Content Include="walle2\widget\echart_line\js\echart_line.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
