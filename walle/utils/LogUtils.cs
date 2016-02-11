@@ -25,5 +25,14 @@ namespace walle.utils
         }
 
         #endregion
+
+        #region error
+
+        public static void error(string strTitle, string strContent)
+        {
+            Console.WriteLine("{0}[{1}]{2}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), strTitle, strContent);
+        }
+
+        #endregion
     }
 }

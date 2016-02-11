@@ -9,6 +9,8 @@ namespace walle.utils
 {
     public class FileUtils
     {
+        #region getFilesInDir
+
         public static void getFilesInDir(string strDirPath, string strPrefix, ref List<FileInfo> lstFileInDirecotry)
         {
             DirectoryInfo oSrcDir = new DirectoryInfo(strDirPath);
@@ -40,5 +42,16 @@ namespace walle.utils
                 Console.WriteLine("Dir not exists:" + strDirPath);
             }
         }
+        
+        #endregion
+
+        #region xcopy
+
+        public static void xcopy(string strDirPathSrc, string strDirPathDst)
+        {
+            ProcessUtils.openAppByBlock("xcopy", string.Format("\"{0}\" \"{1}\\\" /y /e", strDirPathSrc, strDirPathDst));
+        }
+
+        #endregion
     }
 }

@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utils\DirUtils.cs" />
     <Compile Include="utils\ExcelUtils.cs" />
     <Compile Include="utils\FileUtils.cs" />
+    <Compile Include="utils\KeyHookUtils.cs" />
     <Compile Include="utils\LessMinifyUtils.cs" />
     <Compile Include="utils\JSMinifyUtils.cs" />
     <Compile Include="utils\LogUtils.cs" />
