@@ -11,5 +11,3 @@ set DIR_PATH_app=%2\bin\Debug\data\walle.update\
 rmdir %DIR_PATH_app% /q /s
 xcopy %DIR_PATH_walleUpdate% %DIR_PATH_app% /y /s
 echo ======app end=====
-
-pause
