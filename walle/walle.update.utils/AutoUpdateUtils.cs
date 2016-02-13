@@ -15,7 +15,7 @@ namespace walle.update
         {
             var strFilePathUpdate = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"data\walle.update\walle.update.exe");
             var strFilePathSelf = Application.ExecutablePath;
-            ProcessUtils.openApp(strFilePathUpdate, string.Format("{0} {1}", strFilePathSelf, strUrlUpdateXML));
+            ProcessUtils.openAppByBlock(strFilePathUpdate, string.Format("{0} {1}", strFilePathSelf, strUrlUpdateXML));
         }
     }
 }
