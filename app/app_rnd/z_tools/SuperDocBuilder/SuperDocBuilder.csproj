@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{425476A1-F845-4EA7-8F1F-0636BC8BEE9C}</ProjectGuid>
+    <ProjectGuid>{10A09A8A-56E4-4726-97DB-95EC45A4E5B4}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SuperDocBuilder</RootNamespace>
@@ -35,6 +35,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\..\..\packages\EPPlus.4.0.5\lib\net20\EPPlus.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,12 +52,14 @@
   <ItemGroup>
     <Compile Include="app\1.conf\ConfService.cs" />
     <Compile Include="app\1.conf\plugin\ConfServicePlugin.cs" />
-    <Compile Include="app\2.copy\CopyService.cs" />
-    <Compile Include="app\2.copy\plugin\CopyServicePlugin.cs" />
-    <Compile Include="app\3.merge\MergeService.cs" />
-    <Compile Include="app\3.merge\plugin\MergeServicePlugin.cs" />
-    <Compile Include="app\4.build\BuildService.cs" />
-    <Compile Include="app\4.build\plugin\BuildServicePlugin.cs" />
+    <Compile Include="app\2.unzip\plugin\UnzipServicePlugin.cs" />
+    <Compile Include="app\2.unzip\UnzipService.cs" />
+    <Compile Include="app\3.copy\CopyService.cs" />
+    <Compile Include="app\3.copy\plugin\CopyServicePlugin.cs" />
+    <Compile Include="app\4.merge\MergeService.cs" />
+    <Compile Include="app\4.merge\plugin\MergeServicePlugin.cs" />
+    <Compile Include="app\5.build\BuildService.cs" />
+    <Compile Include="app\5.build\plugin\BuildServicePlugin.cs" />
     <Compile Include="app\main\MainService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,6 +72,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Content Include="data\SuperDocBuilder\Sample1.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -76,29 +88,34 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="README.md">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\walle\walle.csproj">
+    <ProjectReference Include="..\..\..\..\walle\walle.update.utils\walle.update.utils.csproj">
+      <Project>{207abea6-9044-43f9-be37-38fb42668a08}</Project>
+      <Name>walle.update.utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\walle\walle\walle.csproj">
       <Project>{7b5c4f8e-6da5-41cb-8452-09958f007f73}</Project>
       <Name>walle</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="data\SuperDocBuilder\conf.xml">
-      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="monkey.ico" />
+    <Content Include="updateInfo.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>rmdir $(TargetDir)data\SuperDocBuilder /q /s
-xcopy $(ProjectDir)data\SuperDocBuilder $(TargetDir)data\SuperDocBuilder\ /y /e</PreBuildEvent>
+    <PreBuildEvent>$(SolutionDir)build\buildWalleUpdate.bat $(SolutionDir) $(ProjectDir)</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>$(SolutionDir)build\publishWalleUpdate.bat $(SolutionDir) $(ProjectName) $(ProjectDir)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

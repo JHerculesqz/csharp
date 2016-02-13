@@ -46,6 +46,13 @@ namespace SuperDocBuilder
                 strMarkDown += File.ReadAllText(strFilePathModuleMD) + Environment.NewLine;
 
                 //3.3.merge image
+                var strDirPathModuleImg = MergeServicePlugin.DIR_PATH_module_image(strDirPathBase, strModule);
+                var lstFileInDirecotryImg = new List<FileInfo>();
+                FileUtils.getFilesInDir(strDirPathModuleImg, ".txt", ref lstFileInDirecotryImg);
+                foreach (var oFileInfoImg in lstFileInDirecotryImg)
+                {
+                    PlantUMLUtils.toImg(oFileInfoImg.FullName);
+                }
                 var strDirPathSrc = MergeServicePlugin.DIR_PATH_module_image(strDirPathBase, strModule);
                 var strDirPathDst = MergeServicePlugin.DIR_PATH_output_image(strDirPathBase);
                 FileUtils.xcopy(strDirPathSrc, strDirPathDst);
