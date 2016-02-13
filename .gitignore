@@ -6,10 +6,11 @@ app/app_rnd/3_executor/SuperJSAuto/bin/
 app/app_rnd/3_executor/SuperJSAuto/obj/
 app/app_rnd/5_dashboard/SuperDashboard/bin/
 app/app_rnd/5_dashboard/SuperDashboard/obj/
-app/app_rnd/z_tools/SuperDocBuilder/bin/
-app/app_rnd/z_tools/SuperDocBuilder/obj/
 app/app_rnd/z_tools/SuperJSBuilder/bin/
 app/app_rnd/z_tools/SuperJSBuilder/obj/
+
+app/app_rnd/z_tools/SuperDocBuilder/bin/
+app/app_rnd/z_tools/SuperDocBuilder/obj/
 app/app_rnd/z_tools/SuperRndTemplate/bin/
 app/app_rnd/z_tools/SuperRndTemplate/obj/
 walle/walle/bin/
