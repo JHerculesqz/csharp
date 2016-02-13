@@ -101,8 +101,9 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\walle\walle.csproj">
+    <ProjectReference Include="..\..\..\walle\walle\walle.csproj">
       <Project>{7b5c4f8e-6da5-41cb-8452-09958f007f73}</Project>
       <Name>walle</Name>
     </ProjectReference>

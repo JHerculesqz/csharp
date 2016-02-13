@@ -10,5 +10,11 @@ app/app_rnd/z_tools/SuperDocBuilder/bin/
 app/app_rnd/z_tools/SuperDocBuilder/obj/
 app/app_rnd/z_tools/SuperJSBuilder/bin/
 app/app_rnd/z_tools/SuperJSBuilder/obj/
-walle/obj/
-bin/
+app/app_rnd/z_tools/SuperRndTemplate/bin/
+app/app_rnd/z_tools/SuperRndTemplate/obj/
+walle/walle/bin/
+walle/walle/obj/
+walle/walle.update/bin/
+walle/walle.update/obj/
+walle/walle.update.utils/bin/
+walle/walle.update.utils/obj/
