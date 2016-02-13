@@ -45,5 +45,16 @@ namespace SuperDocBuilder
         }
 
         #endregion
+
+        #region save
+
+        public void save(string strDirPathBase)
+        {
+            var oDoc = XElement.Load(FILE_PATH_CONF);
+            oDoc.Element(ConfServicePlugin.PROP_dirPathBase).Value = strDirPathBase;
+            oDoc.Save(FILE_PATH_CONF);
+        }
+
+        #endregion
     }
 }

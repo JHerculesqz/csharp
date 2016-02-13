@@ -38,19 +38,14 @@ namespace SuperDocBuilder
 
         public void run()
         {
-            //1.m_oConfService.load
-            m_oConfService.load();
-
-            //2.m_oCopyService.copy
+            //1.m_oCopyService.copy
             m_oCopyService.copy();
 
-            //3.m_oMergeService.merge
+            //2.m_oMergeService.merge
             m_oMergeService.merge();
 
-            //4.m_oBuildService.build
+            //3.m_oBuildService.build
             m_oBuildService.build();
-
-            Console.ReadLine();
         }
 
         #endregion

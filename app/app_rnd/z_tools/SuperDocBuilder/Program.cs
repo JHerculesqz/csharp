@@ -16,8 +16,7 @@ namespace SuperDocBuilder
         [STAThread]
         static void Main()
         {
-            //1.MainService
-            MainService.getInstance().run();
+            new MainForm().ShowDialog();
         }
     }
 }
