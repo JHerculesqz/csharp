@@ -11,7 +11,6 @@ namespace SuperDocBuilder
         #region Fields
 
         public ConfService m_oConfService = new ConfService();
-        public UnzipService m_oUnzipService = new UnzipService();
         public CopyService m_oCopyService = new CopyService();
         public MergeService m_oMergeService = new MergeService();
         public BuildService m_oBuildService = new BuildService();
@@ -42,10 +41,7 @@ namespace SuperDocBuilder
             //1.m_oConfService.load
             m_oConfService.load();
 
-            //2.m_oUnzipService.unzip
-            m_oUnzipService.unzip();
-
-            //3.m_oCopyService.copy
+            //2.m_oCopyService.copy
             m_oCopyService.copy();
 
             //3.m_oMergeService.merge

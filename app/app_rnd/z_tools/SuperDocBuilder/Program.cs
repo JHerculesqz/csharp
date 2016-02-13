@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using walle.update;
 using walle.utils;
 
 namespace SuperDocBuilder
@@ -17,10 +16,7 @@ namespace SuperDocBuilder
         [STAThread]
         static void Main()
         {
-            ////1.AUpdate
-            //AutoUpdateUtils.update("http://localhost:9999/updateInfo_SuperDocBuilder.xml");
-
-            //2.MainService
+            //1.MainService
             MainService.getInstance().run();
         }
     }

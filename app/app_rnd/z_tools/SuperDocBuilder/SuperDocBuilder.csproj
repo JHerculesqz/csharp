@@ -11,6 +11,21 @@
     <AssemblyName>SuperDocBuilder</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,14 +67,12 @@
   <ItemGroup>
     <Compile Include="app\1.conf\ConfService.cs" />
     <Compile Include="app\1.conf\plugin\ConfServicePlugin.cs" />
-    <Compile Include="app\2.unzip\plugin\UnzipServicePlugin.cs" />
-    <Compile Include="app\2.unzip\UnzipService.cs" />
-    <Compile Include="app\3.copy\CopyService.cs" />
-    <Compile Include="app\3.copy\plugin\CopyServicePlugin.cs" />
-    <Compile Include="app\4.merge\MergeService.cs" />
-    <Compile Include="app\4.merge\plugin\MergeServicePlugin.cs" />
-    <Compile Include="app\5.build\BuildService.cs" />
-    <Compile Include="app\5.build\plugin\BuildServicePlugin.cs" />
+    <Compile Include="app\2.copy\CopyService.cs" />
+    <Compile Include="app\2.copy\plugin\CopyServicePlugin.cs" />
+    <Compile Include="app\3.merge\MergeService.cs" />
+    <Compile Include="app\3.merge\plugin\MergeServicePlugin.cs" />
+    <Compile Include="app\4.build\BuildService.cs" />
+    <Compile Include="app\4.build\plugin\BuildServicePlugin.cs" />
     <Compile Include="app\main\MainService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,7 +100,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\walle\walle\walle.csproj">
       <Project>{7b5c4f8e-6da5-41cb-8452-09958f007f73}</Project>
@@ -471,10 +500,12 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>$(SolutionDir)build\buildWalleUpdate.bat $(SolutionDir) $(ProjectDir)</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>$(SolutionDir)build\publishWalleUpdate.bat $(SolutionDir) $(ProjectName) $(ProjectDir)</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
