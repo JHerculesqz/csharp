@@ -63,6 +63,7 @@
     <Compile Include="app\main\MainService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="nbuild.xml" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -72,12 +73,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Content Include="data\SuperDocBuilder\Sample1.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="data\SuperDocBuilder\Sample2.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -94,21 +89,385 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\walle\walle.update.utils\walle.update.utils.csproj">
-      <Project>{207abea6-9044-43f9-be37-38fb42668a08}</Project>
-      <Name>walle.update.utils</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\..\walle\walle\walle.csproj">
       <Project>{7b5c4f8e-6da5-41cb-8452-09958f007f73}</Project>
       <Name>walle</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="monkey.ico" />
+    <Content Include="data\SuperDocBuilder\Sample1\gertiejs\css\theme1.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample1\gertiejs\css\theme2.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample1\gertiejs\image\bg1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample1\gertiejs\image\bg2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample1\gertiejs\image\bg3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample1\gertiejs\image\bg4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample1\gertiejs\image\bg5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample1\gertiejs\image\bg6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample1\image\test.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample1\build_html.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample1\Document.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\image\test.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\print\paper.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\print\pdf.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\source\beige.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\source\black.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\source\blood.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\source\league.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\source\moon.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\source\night.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\source\serif.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\source\simple.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\source\sky.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\source\solarized.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\source\white.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\template\mixins.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\template\settings.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\template\theme.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\beige.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\black.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\blood.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\league.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\moon.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\night.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\serif.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\simple.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\sky.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\solarized.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\theme\white.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\reveal.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\css\reveal.scss">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\js\reveal.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\css\zenburn.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\league-gothic\league-gothic.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\league-gothic\league-gothic.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\league-gothic\league-gothic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\league-gothic\league-gothic.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\league-gothic\LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\source-sans-pro\LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\source-sans-pro\source-sans-pro-italic.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\source-sans-pro\source-sans-pro-italic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\source-sans-pro\source-sans-pro-italic.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\source-sans-pro\source-sans-pro-regular.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\source-sans-pro\source-sans-pro-regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\source-sans-pro\source-sans-pro-regular.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\source-sans-pro\source-sans-pro-semibold.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\source-sans-pro\source-sans-pro-semibold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\source-sans-pro\source-sans-pro-semibold.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\source-sans-pro\source-sans-pro-semibolditalic.eot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\source-sans-pro\source-sans-pro-semibolditalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\source-sans-pro\source-sans-pro-semibolditalic.woff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\font\source-sans-pro\source-sans-pro.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\js\classList.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\js\head.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\lib\js\html5shiv.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\highlight\highlight.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\markdown\example.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\markdown\example.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\markdown\markdown.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\markdown\marked.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\math\math.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\multiplex\client.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\multiplex\index.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\multiplex\master.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\notes\notes.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\notes\notes.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\notes-server\client.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\notes-server\index.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\notes-server\notes.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\print-pdf\print-pdf.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\search\search.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\plugin\zoom-js\zoom.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\examples\assets\image1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\examples\assets\image2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\examples\barebones.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\examples\embedded-media.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\examples\math.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\examples\slide-backgrounds.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\examples\slide-transitions.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\qunit-1.12.0.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\qunit-1.12.0.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\test-markdown-element-attributes.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\test-markdown-element-attributes.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\test-markdown-slide-attributes.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\test-markdown-slide-attributes.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\test-markdown.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\test-markdown.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\test-pdf.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\test-pdf.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\test.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\test\test.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\.gitignore">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\.travis.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\bower.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\CONTRIBUTING.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\Gruntfile.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\package.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\reveal.js\README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\build_html.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\SuperDocBuilder\Sample2\Document.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="data\SuperDocBuilder\conf.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="monkey.ico" />
-    <Content Include="updateInfo.xml" />
+    <Content Include="data\walle\7z32\7-zip.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\walle\7z32\7-zip.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\walle\7z32\7z.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\walle\7z32\7z.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\walle\7z32\7z.sfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\walle\7z32\7zCon.sfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\walle\7z32\7zFM.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\walle\7z32\7zG.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\walle\7z32\descript.ion">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\walle\plantuml\plantuml.jar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

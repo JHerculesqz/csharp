@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -1144,12 +1145,6 @@
     <None Include="data\SuperJSBuilder\node_modules\less\test\less\whitespace.less" />
     <None Include="data\SuperJSBuilder\node_modules\less\test\sourcemaps\basic.json" />
     <None Include="data\SuperJSBuilder\node_modules\less\test\sourcemaps\maps\import-map.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\walle\walle.csproj">
-      <Project>{7b5c4f8e-6da5-41cb-8452-09958f007f73}</Project>
-      <Name>walle</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="data\SuperJSBuilder\mock_reg\mock_reg_part.js">
