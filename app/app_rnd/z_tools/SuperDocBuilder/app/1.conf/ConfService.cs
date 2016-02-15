@@ -50,6 +50,8 @@ namespace SuperDocBuilder
 
         public void save(string strDirPathBase)
         {
+            this.Confs[ConfServicePlugin.PROP_dirPathBase] = strDirPathBase;
+
             var oDoc = XElement.Load(FILE_PATH_CONF);
             oDoc.Element(ConfServicePlugin.PROP_dirPathBase).Value = strDirPathBase;
             oDoc.Save(FILE_PATH_CONF);

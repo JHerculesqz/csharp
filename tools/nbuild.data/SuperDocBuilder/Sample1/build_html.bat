@@ -1,2 +1,2 @@
 cd %~dp0
-pandoc -s --mathml -i -t dzslides -c gertiejs/css/theme2.css Document.md -o Document.html
+pandoc -s --mathml -i -t dzslides -c %~dp0gertiejs/css/theme2.css %~dp0Document.md -o %~dp0Document.html

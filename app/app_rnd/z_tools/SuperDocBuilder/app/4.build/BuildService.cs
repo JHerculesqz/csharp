@@ -15,7 +15,7 @@ namespace SuperDocBuilder
         {
             LogUtils.debug("BuildService.build", "start...");
 
-            ProcessUtils.openAppByBlock(BuildServicePlugin.FILE_PATH_build_bat(MainService.getInstance().m_oConfService.Confs[ConfServicePlugin.PROP_dirPathBase]), "");
+            ProcessUtils.openAppByBlockAndEnv(BuildServicePlugin.FILE_PATH_build_bat(MainService.getInstance().m_oConfService.Confs[ConfServicePlugin.PROP_dirPathBase]), "");
 
             LogUtils.debug("BuildService.build", "end...");
         }

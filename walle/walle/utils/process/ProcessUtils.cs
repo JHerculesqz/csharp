@@ -47,13 +47,12 @@ namespace walle.utils
             var oProcessStartInfo = new ProcessStartInfo();
             oProcessStartInfo.FileName = strCmd;
             oProcessStartInfo.Arguments = strArgs;
-            foreach (DictionaryEntry oEnvVar in Environment.GetEnvironmentVariables(EnvironmentVariableTarget.User))
+            foreach (DictionaryEntry oEnvVar in Environment.GetEnvironmentVariables(EnvironmentVariableTarget.Machine))
 	        {
                 if (!oProcessStartInfo.EnvironmentVariables.ContainsKey(oEnvVar.Key.ToString()))
 	            {
                     oProcessStartInfo.EnvironmentVariables.Add(oEnvVar.Key.ToString(), oEnvVar.Value.ToString());
 	            }
-                
 	        }
             oProcessStartInfo.UseShellExecute = false;
             var oProcess = Process.Start(oProcessStartInfo);
